@@ -27,6 +27,6 @@
             <h5 class="card-title">{{this.subject}}</h5>
             <p class="card-text">{{ this.entry }}</p>
         </div>
-        <button class="btn btn-primary" @click="$emit('click')">Delete</button>
+        <slot></slot>
     </div>
 </template>
