@@ -45,6 +45,7 @@
                 .then(response => {
                     // this gets the data, which is an array
                     console.log(id)
+                    this.posts = this.posts.filter(post=>post.id!=id)
                     console.log(response.data)
                 })
                 .catch(error => {
