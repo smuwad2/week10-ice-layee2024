@@ -2,12 +2,30 @@
     export default {
         // Add code if/as necessary
         // Hint: Add properties subject, entry and mood
+        props: {
+            subject: String,
+            entry: String,
+            mood: String
+        },
+
+        computed: {
+            getImg() {
+                const moodLower = this.mood[0].toLowerCase() + this.mood.substring(1)
+                return `/assets/${moodLower}.png`
+            }
+        }
     }
 </script>
 
 
 <template>
     <!-- TODO: add your template code here. Use boostrap card --> 
-
+    <div class="card" style="width: 18rem;">
+    <img :src="getImg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{this.subject}}</h5>
+        <p class="card-text">{{ this.entry }}</p>
+    </div>
+    </div>
 </template>
 

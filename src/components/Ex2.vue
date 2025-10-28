@@ -3,6 +3,9 @@
     import blogPost from './subcomponents/BlogPost.vue'
 	import axios from 'axios'
     export default {
+        components: {
+            blogPost
+        },
         data() {
             return {
                 posts: [] // array of post objects
@@ -34,6 +37,6 @@
 
 <template>
    <!-- TODO: make use of the 'blog-post' component to display the blog posts -->
-
+    <blogPost v-for="v in this.posts" :mood="v.mood" :subject="v.subject" :entry="v.entry"/>
 </template>
 
