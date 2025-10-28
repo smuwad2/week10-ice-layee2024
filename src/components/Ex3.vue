@@ -60,6 +60,6 @@
 <template>
    <!-- TODO: make use of the 'blog-post' component to display the blog posts -->
 <blogPost v-for="v in this.posts" :key="v.id" :id="v.id" :mood="v.mood" :subject="v.subject" :entry="v.entry">
-    <button class="btn btn-primary" @click="deletePost(v.id)"></button>
+    <button class="btn btn-primary" @click="deletePost(v.id)">Delete</button>
 </blogPost>
 </template>
