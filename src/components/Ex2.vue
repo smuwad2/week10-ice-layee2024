@@ -1,7 +1,7 @@
 <script>
     // Import BlogPost component
     import blogPost from './subcomponents/BlogPost.vue'
-	import axios from 'axios'
+    import axios from 'axios'
     export default {
         components: {
             blogPost
@@ -21,7 +21,7 @@
                 }
             }
         },
-        created() { // created is a hook that executes as soon as Vue instance is created
+        created() { // [translate:created is a hook that executes as soon as Vue instance is created]
             axios.get(`${this.baseUrl}/posts`)
             .then(response => {
                 // this gets the data, which is an array
@@ -35,8 +35,8 @@
     }
 </script>
 
+
 <template>
    <!-- TODO: make use of the 'blog-post' component to display the blog posts -->
     <blogPost v-for="v in this.posts" :mood="v.mood" :subject="v.subject" :entry="v.entry"/>
 </template>
-

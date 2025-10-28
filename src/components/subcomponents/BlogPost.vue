@@ -8,6 +8,7 @@
             mood: String
         },
 
+
         computed: {
             getImg() {
                 const moodLower = this.mood[0].toLowerCase() + this.mood.substring(1)
@@ -16,6 +17,7 @@
         }
     }
 </script>
+
 
 
 <template>
@@ -28,4 +30,3 @@
     </div>
     </div>
 </template>
-

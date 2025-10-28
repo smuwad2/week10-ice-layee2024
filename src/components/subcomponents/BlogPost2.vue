@@ -9,6 +9,7 @@
             id: Number
         },
 
+
         computed: {
             getImg() {
                 const moodLower = this.mood[0].toLowerCase() + this.mood.substring(1)
@@ -17,7 +18,6 @@
         }
     }
 </script>
-
 
 <template>
     <!-- TODO: add your template code here. Use boostrap card --> 
@@ -30,5 +30,3 @@
         <button class="btn btn-primary" @click="$emit('click')">Delete</button>
     </div>
 </template>
-
-
